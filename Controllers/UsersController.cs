@@ -46,7 +46,7 @@ namespace asp.net_jwt.Controllers
         // GET: api/users
         [Authorize]
         [HttpGet("test")]
-        public async Task<ActionResult<string> GetAllUsers()
+        public async Task<ActionResult<string> GetAllUsersTest()
         {
             try
             {

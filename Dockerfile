@@ -12,8 +12,8 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["asp.net_jwt/asp.net_jwt.csproj", "asp.net_jwt/"]
-RUN dotnet restore "./asp.net_jwt/asp.net_jwt.csproj"
+COPY ["asp.net_jwt.csproj", "asp.net_jwt/"]
+RUN dotnet restore "./asp.net_jwt.csproj"
 COPY . .
 WORKDIR "/src/asp.net_jwt"
 RUN dotnet build "./asp.net_jwt.csproj" -c $BUILD_CONFIGURATION -o /app/build
