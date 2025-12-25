@@ -1,0 +1,6 @@
+@asp.net_jwt_HostAddress = http://localhost:5173
+
+GET {{asp.net_jwt_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
